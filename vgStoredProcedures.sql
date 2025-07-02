@@ -76,8 +76,7 @@ END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE PROCEDURE addNewRelease(IN game VARCHAR(200),IN plat VARCHAR(30),
-								IN genre VARCHAR(30),IN publisher VARCHAR(200))
+CREATE PROCEDURE addNewRelease(IN game VARCHAR(200),IN plat VARCHAR(30),IN genre VARCHAR(30),IN publisher VARCHAR(200))
 BEGIN
 	DECLARE game_ID INT;
     DECLARE platform_ID INT DEFAULT (SELECT platformID FROM vg_platform WHERE platform_name = plat);
