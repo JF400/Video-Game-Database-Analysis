@@ -1,6 +1,5 @@
 DELIMITER $$
-CREATE PROCEDURE gameProfitByRegion(IN min_profit DOUBLE,
-									IN region CHAR(2))
+CREATE PROCEDURE gameProfitByRegion(IN min_profit DOUBLE,IN region CHAR(2))
 BEGIN
 	IF region = 'WD' THEN
 		SELECT game_name, global_sales
